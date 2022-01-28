@@ -19,7 +19,6 @@ jobs:
           config_timezone: Europe/Zagreb
           config_presets: "@lunar-red"
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          output_condition: data-changed
           experimental_features: --optimize-svg
           optimize: css, xml, svg
           
@@ -29,7 +28,7 @@ jobs:
           
           # 🥠 Fortune
           plugin_fortune: yes
-          
+        
           # 🎫 Gists
           plugin_gists: yes
           
