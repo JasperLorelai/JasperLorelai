@@ -6,11 +6,13 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # 🗃️ Base content
+          base_indepth: yes
+          base_hireable: yes
           repositories_forks: yes
 
           # 🧱 Core
@@ -19,10 +21,22 @@ jobs:
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           experimental_features: --optimize-svg
           optimize: css, xml, svg
+          clean_workflows: success
 
           # 📅 Isometric commit calendar
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+          # 💡 Habits
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: graph
+          plugin_habits_trim: yes
+
+          # 📓 Featured
+          plugin_repositories: yes
+          plugin_repositories_pinned: 6
+          plugin_repositories_forks: yes
 
           # 🎫 Gists
           plugin_gists: yes
@@ -32,9 +46,19 @@ jobs:
 
           # 👨‍💻 Lines of code changed
           plugin_lines: yes
+          plugin_lines_sections: base, history
+          plugin_lines_repositories_limit: 10
 
           # 🧑‍🤝‍🧑 People plugin
           plugin_people: yes
+
+          # 🕹️ Steam
+          plugin_steam: yes
+          plugin_steam_sections: player
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: jasperlorelai
+          plugin_steam_games_limit: 3
+          plugin_steam_recent_games_limit: 3
 
           # 🈷️ Most used languages
           plugin_languages: yes
