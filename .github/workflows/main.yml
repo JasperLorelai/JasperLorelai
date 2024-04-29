@@ -54,11 +54,12 @@ jobs:
 
           # 🕹️ Steam
           plugin_steam: yes
-          plugin_steam_sections: player, most-played, recently-played
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_sections: player, most-played, recently-played
           plugin_steam_user: "76561198872290901"
-          plugin_steam_games_limit: 3
-          plugin_steam_recent_games_limit: 3
+          plugin_steam_games_limit: 10
+          plugin_steam_recent_games_limit: 5
+          plugin_steam_achievements_limit: 5
 
           # 🈷️ Most used languages
           plugin_languages: yes
