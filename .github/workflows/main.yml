@@ -59,7 +59,8 @@ jobs:
           plugin_steam_user: "76561198872290901"
           plugin_steam_games_limit: 10
           plugin_steam_recent_games_limit: 5
-          plugin_steam_achievements_limit: 5
+          plugin_steam_achievements_limit: 0
+          plugin_steam_playtime_threshold: 0
 
           # 🈷️ Most used languages
           plugin_languages: yes
