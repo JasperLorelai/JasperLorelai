@@ -6,7 +6,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@v3.34
+      - uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -28,7 +28,7 @@ jobs:
           plugin_isocalendar_duration: full-year
 
           # 💡 Habits
-          plugin_habits: yes
+          plugin_habits: no
           plugin_habits_charts: yes
           plugin_habits_charts_type: graph
           plugin_habits_trim: yes
